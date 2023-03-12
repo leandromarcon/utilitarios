@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <!-- Meta tags Obrigatórias -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <title>JavaScript</title>
+</head>
+<body>
+  <div class="container">
+    <h1>JavaScript</h1>
+    <div class="row">
+      <div class="col">
+        <div class="jumbotron">
+          <h1 class="display-4">Soma</h1>
+          <p class="lead">Utilize este programa para somar dois números inteiros</p>
+
+          <form class="form-inline">
+            <div class="form-group mx-sm-3 mb-2">
+              <input type="text" class="form-control" id="numero1" placeholder="Digite um número">
+            </div>
+            <div class="form-group mx-sm-3 mb-2">
+              <input type="text" class="form-control" id="numero2" placeholder="Digite um número">
+            </div>
+            <button type="button" onclick="somar()" class="btn btn-primary mb-2">Calcular</button>
+          </form>
+          <hr class="my-4">
+          <h1 class="display-4" id="resposta_soma">???</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script type="text/javascript">
+
+    function somar() {
+     var n1 = document.getElementById('numero1').value;
+     var n2 = document.getElementById('numero2').value;
+     var resposta = parseInt(n2) + parseInt(n1);
+
+     document.getElementById('resposta_soma').innerHTML = resposta;
+   }
+
+ </script>
+
+  <div class="container">
+    <h1>JavaScript</h1>
+    <div class="row">
+      <div class="col">
+        <div class="jumbotron">
+          <h1 class="display-4">Idade</h1>
+          <p class="lead">Utilize este programa para calcular sua idade</p>
+
+          <form class="form-inline">
+            <div class="form-group mx-sm-3 mb-2">
+              <input type="text" class="form-control" id="numero1" placeholder="Digite o ano atual">
+            </div>
+            <div class="form-group mx-sm-3 mb-2">
+              <input type="text" class="form-control" id="numero2" placeholder="Digite sua data de nascimento">
+            </div>
+            <button type="button" onclick="idade()" class="btn btn-primary mb-2">Calcular</button>
+          </form>
+          <hr class="my-4">
+          <h1 class="display-4" id="idade">???</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script type="text/javascript">
+
+    function idade() {
+     var n1 = document.getElementById('numero1').value;
+     var n2 = document.getElementById('numero2').value;
+     var resposta = parseInt(n1) - parseInt(n2);
+
+     document.getElementById('idade').innerHTML = resposta;
+   }
+
+ </script>
+
+
+
+<div class="container">
+  <h1>JavaScript</h1>
+  <div class="row">
+    <div class="col">
+      <div class="jumbotron">
+        <h1 class="display-4">Dolar</h1>
+        <p class="lead">Utilize este programa para calcular o valor do dolar</p>
+
+        <form class="form-inline">
+          <div class="form-group mx-sm-3 mb-2">
+            <input type="text" class="form-control" id="valor_real" placeholder="Informe o valor a ser convertido">
+          </div>
+          <div class="form-group mx-sm-3 mb-2">
+            <input type="text" class="form-control" id="valor_dolar" placeholder="Informe a cotção atual do dolar">
+          </div>
+          <button type="button" onclick="calc_dolar()" class="btn btn-primary mb-2">Converter</button>
+        </form>
+        <hr class="my-4">
+        <h1 class="display-4" id="resposta_converte">???</h1>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+
+    function calc_dolar() {
+     var a1 = document.getElementById('valor_real').value;
+     var a2 = document.getElementById('valor_dolar').value;
+     var resposta_converte = parseFloat(a1) * parseFloat(a2);
+
+     document.getElementById('resposta_converte').innerHTML = resposta_converte.toFixed(2);
+   }
+
+ </script>
+
+
+ <div class="container">
+  <h1>JavaScript</h1>
+  <div class="row">
+    <div class="col">
+      <div class="jumbotron">
+        <h1 class="display-4">Tabuada</h1>
+        <p class="lead">Utilize este programa para realizar operações arritimeticas</p>
+
+        <form class="form-inline">
+          <div class="form-group mx-sm-3 mb-2">
+            <input type="text" class="form-control" id="num" placeholder="Digite um numero:">
+          </div>
+          <button type="button" onclick="tabuada()" class="btn btn-primary mb-2">Mostrar Tabuada</button>
+        </form>
+        <hr class="my-4">
+        <h1 class="display-4" id="resposta">???</h1>
+      </div>
+    </div>
+  </div>
+
+
+  <script type="text/javascript">
+    function tabuada(){
+      var num = parseInt(document.getElementById("num").value);
+      var resposta = document.getElementById('resposta');
+      var tabuada='';
+
+      for(var count=1; count<=10 ; count++)
+        tabuada += num+" x "+count+" = "+
+      num*count+"<br />";
+
+      resposta.innerHTML = tabuada;
+    }
+  </script>
+
+
+
+  <div class="container">
+    <h1>JavaScript</h1>
+    <div class="row">
+      <div class="col">
+        <div class="jumbotron">
+          <h1 class="display-4">Media</h1>
+          <p class="lead">Utilize este programa para calcular a media</p>
+
+          <form class="form-inline">
+            <div class="form-group mx-sm-3 mb-2">
+              <input type="text" class="form-control" id="n1" placeholder="Digite nota 01">
+            </div>
+            <div class="form-group mx-sm-3 mb-2">
+              <input type="text" class="form-control" id="n2" placeholder="Digite nota 02">
+            </div>
+            <div class="form-group mx-sm-3 mb-2">
+              <input type="text" class="form-control" id="n3" placeholder="Digite nota 03">
+            </div>
+            <div class="form-group mx-sm-3 mb-2">
+              <input type="text" class="form-control" id="frequencia" placeholder="Informe a frequencia">
+            </div>
+            <div></div>
+            <button type="button" onclick="calc_media()" class="btn btn-primary mb-2">Calcular Media</button>
+          </form>
+          <hr class="my-4">
+          <h1 class="display-4" id="resposta_media">Nota</h1>
+          <h1 class="display-4" id="resposta_freq">Situação</h1>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+
+      function calc_media() {
+       var nota1 = document.getElementById('n1').value;
+       var nota2 = document.getElementById('n2').value;
+       var nota3 = document.getElementById('n3').value;
+       var freq = document.getElementById('frequencia').value
+
+       var resposta_media = (parseFloat(nota1) + parseFloat(nota2) + parseFloat(nota3)) / 3;
+
+       if (freq >= 75 && resposta_media >= 7){
+         document.getElementById('resposta_freq').innerHTML = "Aprovado!";
+       }
+       else{
+        document.getElementById('resposta_freq').innerHTML = "Reprovado!";
+      }
+      if (resposta_media < 7 && resposta_media > 4) {
+        document.getElementById('resposta_freq').innerHTML = "Aluno em Exame!";
+      }
+
+      document.getElementById('resposta_media').innerHTML = resposta_media.toFixed(2);
+    }
+
+  </script>
+
+  <div class="container">
+    <h1>JavaScript</h1>
+    <div class="row">
+      <div class="col">
+        <div class="jumbotron">
+          <h1 class="display-4">Calculadora</h1>
+          <p class="lead">Utilize este programa realizar operações matematicas</p>
+
+          <form class="form-inline">
+            <div class="form-group mx-sm-3 mb-2">
+              <input type="text" class="form-control" id="vlr1" placeholder="Digite um número">
+            </div>
+            <div class="form-group mx-sm-3 mb-2">
+              <input type="text" class="form-control" id="vlr2" placeholder="Digite outro número">
+            </div>
+            <div>  
+              <button type="button" onclick="soma()" class="btn btn-primary mb-2">Adição (+)</button>
+              <button type="button" onclick="subtrai()" class="btn btn-primary mb-2">Subtração (-)</button>
+              <button type="button" onclick="multiplica()" class="btn btn-primary mb-2">Multiplicação (*)</button>
+              <button type="button" onclick="divide()" class="btn btn-primary mb-2">Divisão (/)</button></div>  
+            </form>
+            <hr class="my-4">
+            <h1 class="display-4" id="resposta_operacao">Resultado =</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script type="text/javascript">
+
+      function soma() {
+       var s1 = document.getElementById('vlr1').value;
+       var s2 = document.getElementById('vlr2').value;
+       var respsoma = parseInt(s1) + parseInt(s2);
+       document.getElementById('resposta_operacao').innerHTML = respsoma;
+     }
+
+     function subtrai(){
+      var s1 = document.getElementById('vlr1').value;
+      var s2 = document.getElementById('vlr2').value;
+      var respsub = parseInt(s1) - parseInt(s2);
+      document.getElementById('resposta ao').innerHTML = respsub;
+    }
+    function multiplica(){
+      var s1 = document.getElementById('vlr1').value;
+      var s2 = document.getElementById('vlr2').value;
+      var respmult = parseInt(s1) * parseInt(s2);
+      document.getElementById('resposta_operacao').innerHTML = respmult;
+    }
+    function divide(){
+      var s1 = document.getElementById('vlr1').value;
+      var s2 = document.getElementById('vlr2').value;
+      var respdiv = parseInt(s1) / parseInt(s2);
+      document.getElementById('resposta_operacao').innerHTML = respdiv;
+    }
+
+  </script>
+
+
+  <div class="container">
+    <h1>JavaScript</h1>
+    <div class="row">
+      <div class="col">
+        <div class="jumbotron">
+          <h1 class="display-4">Calcular Quilowatts</h1>
+          <p class="lead">Utilize este programa para calcular a quantiedade quilowatts do cliente</p>
+          <p class="lead">Informe abaixo o Tipo de Cliente:</p>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="fisica" value="opcao1" checked>
+            <label class="form-check-label" for="exampleRadios1">
+              Cliente Fisico (R$0,56)
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="juridica" value="opcao2">
+            <label class="form-check-label" for="exampleRadios2">
+              Cliente Juridico (R$0,88)
+            </label>
+          </div>
+          <form class="form-inline">
+            <div class="form-group mx-sm-3 mb-2">
+              <input type="text" class="form-control" id="watts" placeholder="Informe o quilowatts">
+            </div>
+            <button type="button" onclick="resp_watts()" class="btn btn-primary mb-2">Calcular</button>
+          </form>
+          <hr class="my-4">
+          <h1 class="display-4" id="resposta_watts">???</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+
+    function resp_watts() {
+     var watt = document.getElementById('watts').value;
+     
+
+     if (document.getElementById("fisica").checked) {
+
+      var resposta_watts = watt * 0.56;
+      document.getElementById('resposta_watts').innerHTML = resposta_watts.toFixed(2);
+    }
+    if (document.getElementById("juridica").checked) {
+
+      var resposta_watts = watt * 0.88;
+      document.getElementById('resposta_watts').innerHTML = resposta_watts.toFixed(2);
+    }
+  }
+
+</script>
+
+<div class="container">
+  <h1>JavaScript</h1>
+  <div class="row">
+    <div class="col">
+      <div class="jumbotron">
+        <h1 class="display-4">Lanche</h1>
+        <p class="lead">Utilize este programa para comprar um lanche</p>
+        <p class="lead">Informe abaixo o Tipo de Lanche:</p>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="pastel" value="opcao1" checked>
+          <label class="form-check-label" for="exampleRadios1">
+            - Pastel (R$5,00)
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="crepe" value="opcao2">
+          <label class="form-check-label" for="exampleRadios2">
+            - Crepe (R$6,00)
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="pizza" value="opcao3">
+          <label class="form-check-label" for="exampleRadios2">
+            - Pizza(R$7,00)
+          </label>
+          <form class="form-inline">
+           <div class="form-group mx-sm-3 mb-2">
+            <input type="text" class="form-control" id="quant_lanche" placeholder="Informe a quantiedade">
+          </div>
+        </form>
+      </div>
+      <p class="lead">Adicionais:</p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="queijo">
+        <label class="form-check-label" for="defaultCheck1">
+          - Queijo (R$1,00)
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="catupiri">
+        <label class="form-check-label" for="defaultCheck2">
+          - Catupiri (R$2,00)
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="creem-cheese">
+        <label class="form-check-label" for="defaultCheck3">
+          - Creem-Cheese (R$3,00)
+        </label>
+      </div>
+      <form class="form-inline">
+        <button type="button" onclick="resp_lanche()" class="btn btn-primary mb-2">Calcular Total do Lanche</button>
+      </form>
+      <hr class="my-4">
+      <h1 class="display-4" id="resposta_lanche">Total</h1>
+    </div>
+  </div>
+</div>
+</div>
+<script type="text/javascript">
+
+  function resp_lanche() {
+   var lan = document.getElementById('quant_lanche').value;
+   
+   if (document.getElementById("pastel").checked) {
+
+    var resposta_lanche = lan * 5;
+  }
+
+  if (document.getElementById("crepe").checked) {
+
+    var resposta_lanche = lan * 6;
+    
+  }
+  if (document.getElementById("pizza").checked) {
+
+    var resposta_lanche = lan * 7;
+    
+  }
+  if (document.getElementById('queijo').checked) {
+    var resposta_lanche = resposta_lanche + 1;
+  }
+  if (document.getElementById('catupiri').checked) {
+    var resposta_lanche = resposta_lanche + 2;
+  }
+  if (document.getElementById('creem-cheese').checked) {
+    var resposta_lanche = resposta_lanche + 3;
+  }
+  
+  document.getElementById('resposta_lanche').innerHTML = resposta_lanche.toFixed(2);
+}
+
+</script>
+
+<div class="container"
+<title>JavaScript</title>
+</head>
+<body>
+<div class="container">
+    <h1>JavaScript</h1>
+    <div class="row">
+      <div class="col">
+        <div class="jumbotron">
+          <h1 class="display-4">Idade com data atual</h1>
+          <p class="lead">Utilize este programa para descobrir sua idade (ano ataual do computador)</p>
+            <div class="form-group mx-sm-3 mb-2">
+              <input type="text" class="form-control" id="ano_nasc" placeholder="Digite o ano do seu nascimento">
+            </div>
+            <button type="button" onclick="calc_idade()" class="btn btn-primary mb-2">Calcular</button>
+          </form>
+          <hr class="my-4">
+          <h1 class="display-4" id="resposta_nasc">???</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script type="text/javascript">
+  function calc_idade() {
+   var ano_nasc = document.getElementById('ano_nasc').value;
+    var date = new Date()
+
+  var anoatual = date.getFullYear()
+
+  var resposta_nasc = parseInt(anoatual) - parseInt(ano_nasc);
+
+
+document.getElementById('resposta_nasc').innerHTML = resposta_nasc;
+
+ }
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- JavaScript (Opcional) -->
+<!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
